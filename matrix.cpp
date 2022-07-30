@@ -290,7 +290,7 @@ matrix::matrix(int row, char filename[50])
     file.close();
 }
 
-matrix::matrix(matrix &M):row_(M.getRow()), col_(M.getRow())
+matrix::matrix(matrix &M) : row_(M.getRow()), col_(M.getRow())
 {
     // coping matrix from another matrix
     matrixCreate();
@@ -305,9 +305,9 @@ matrix::matrix(matrix &M):row_(M.getRow()), col_(M.getRow())
 
 // operator overloading
 
-matrix& matrix::operator=(const matrix M)
-{   // operator = 
-    // this is same as copy matrix  
+matrix &matrix::operator=(const matrix M)
+{ // operator =
+    // this is same as copy matrix
     setter(M.getRow(), M.getCol());
     matrixCreate();
     // copy matrix content
@@ -318,9 +318,70 @@ matrix& matrix::operator=(const matrix M)
             mat_[i][j] = M.mat_[i][j];
         }
     }
-    return ( *this );
+    return (*this);
 }
 
+matrix matrix::operator+(matrix &M) const
+{
+    // operator +
+    matrix ans;
+    ans.setter(M.getRow(), M.getCol());
+    ans.matrixCreate();
+    for (int i = 0; i < ans.getRow(); i++)
+    {
+        for (int j = 0; j < ans.getCol(); j++)
+        {
+            ans.mat_[i][j] = this->mat_[i][j] + M.mat_[i][j];
+        }
+    }
+    return ans;
+}
+
+matrix matrix::operator-(matrix &M) const
+{
+    // operator -
+    matrix ans;
+    ans.setter(M.getRow(), M.getCol());
+    ans.matrixCreate();
+    for (int i = 0; i < ans.getRow(); i++)
+    {
+        for (int j = 0; j < ans.getCol(); j++)
+        {
+            ans.mat_[i][j] = this->mat_[i][j] - M.mat_[i][j];
+        }
+    }
+    return ans;
+}
+
+matrix matrix::operator*(matrix &M) const
+{
+    // operator *
+    if (this->getCol() == M.getRow())
+    {
+        matrix ans;
+        // row of 1st mat and col of 2nd mat    
+        ans.setter(this->getRow(), M.getCol());
+        ans.matrixCreate();
+
+        for (int i = 0; i < ans.getRow(); i++)
+        {
+            for (int j = 0; j < ans.getCol(); j++)
+            {
+                // this is for non square matrix too
+                for (int k = 0; k < this->getCol(); k++)
+                {
+                    ans.mat_[i][j] += this->mat_[i][k] * M.mat_[k][j];
+                }
+            }
+        }
+        return ans;
+    }
+    else
+    {
+        cout << "Cannot multiply these matrix !!! 1st matrix col and 2nd matrix row don't match !!!" << endl;
+        exit(0);
+    }
+}
 
 // deconstructor
 

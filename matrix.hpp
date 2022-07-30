@@ -42,7 +42,15 @@ public:
     /* --------------------operator overloading-------------------- */
     // operator =
     matrix& operator=(const matrix M);
+    // operator +
     matrix operator+(matrix &M) const;
+    // operator - 
+    matrix operator-(matrix &M) const;
+    // operator *
+    matrix operator*(matrix &M) const;
+
+
+
     // deconstructor
     ~matrix();
 };

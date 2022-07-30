@@ -50,11 +50,39 @@ int main()
     // matrix m9(m8);
     // m9.displayMatrix();
 
-    matrix m10;
-    m10.displayMatrix();
-    cout << "----------" << endl;
-    matrix m11 = m10;
-    m11.displayMatrix();
+    // matrix m10;
+    // m10.displayMatrix();
+    // cout << "----------" << endl;
+    // matrix m11 = m10;
+    // m11.displayMatrix();
+
+    // matrix m12, m13;
+    // m12.displayMatrix();
+    // cout << "----------" << endl;
+    // m13.displayMatrix();
+    // cout << "-----ANS-----" << endl;
+    // matrix m14 = m12 + m13;
+    // m14.displayMatrix();
+
+    // matrix m15, m16;
+    // m15.displayMatrix();
+    // cout << "----------" << endl;
+    // m16.displayMatrix();
+    // cout << "-----ANS-----" << endl;
+    // matrix m17 = m15 - m16;
+    // m17.displayMatrix();
+
+    // matrix m18;
+    // m18.displayMatrix();
+    // cout << "----------" << endl;
+    // cout << "enter filename :" << endl;
+    // char filename[50];
+    // cin >> filename;
+    // matrix m19(filename);
+    // m19.displayMatrix();
+    // cout << "-----ANS-----" << endl;
+    // matrix m20 = m18 * m19;
+    // m20.displayMatrix();
 
     return 0;
 }
