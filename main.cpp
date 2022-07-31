@@ -17,6 +17,7 @@ int main()
     // char filename[50];
     // cin >> filename;
     // matrix m1(filename);
+    // m1.displayMatrix();
 
     // matrix m2(49, 49);
 
@@ -24,6 +25,7 @@ int main()
     // char filename[50];
     // cin >> filename;
     // matrix m3(3,3,filename);
+    // m3.displayMatrix();
 
     // cout << "Enter new filename for output :" << endl;
     // char filename2[50];
@@ -83,6 +85,33 @@ int main()
     // cout << "-----ANS-----" << endl;
     // matrix m20 = m18 * m19;
     // m20.displayMatrix();
+
+    // matrix m21;
+    // cout << m21;
+
+    // matrix m22;
+    // cin >> m22;
+    // m22.displayMatrix();
+
+    // matrix m23;
+    // m23.displayMatrix();
+    // cout << "----------" << endl;
+    // m23.scalarMultiplication(0.5);
+    // m23.displayMatrix();
+
+    // matrix m24;
+    // m24.displayMatrix();
+    // cout << "----------" << endl;
+    // m24.scalarDivision(2);
+    // //cout << m24;
+    // m24.displayMatrix();
+
+    // matrix m25;
+    // m25.displayMatrix();
+    // cout << m25.isDiagonalDominant();
+    // (m25.isDiagonalDominant()) ? (cout << "Yes \n") : (cout << "No \n");
+    
+    
 
     return 0;
 }

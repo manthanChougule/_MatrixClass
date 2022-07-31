@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 30 14:27:51 2022
+# Make data base, printed on Sun Jul 31 12:40:23 2022
 
 # Variables
 
@@ -53,17 +53,17 @@ VSCODE_CODE_CACHE_PATH = /home/sennin/.config/Code/CachedData/3b889b090b5ad5793f
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.RYG3P1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.AU2ZP1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.113
+GNOME_TERMINAL_SERVICE = :1.123
 # makefile
 MAKEFLAGS = pqrR
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=db5f1923ca28dce1c2d4300862e4f087
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=1692d7fbbe9eb0baa39c63ca62e62a6a
 # makefile
 CURDIR := /home/sennin/Downloads/Lab_work/Matrix/_MatrixClass
 # environment
@@ -95,7 +95,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 4140
+VSCODE_PID = 5086
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -103,13 +103,13 @@ XDG_SESSION_TYPE = wayland
 # environment
 CONDA_PYTHON_EXE = /home/sennin/anaconda3/bin/python
 # environment
-SESSION_MANAGER = local/sennin-MS-7A38:@/tmp/.ICE-unix/1839,unix/sennin-MS-7A38:/tmp/.ICE-unix/1839
+SESSION_MANAGER = local/sennin-MS-7A38:@/tmp/.ICE-unix/1853,unix/sennin-MS-7A38:/tmp/.ICE-unix/1853
 # automatic
 *F = $(notdir $*)
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=db5f1923ca28dce1c2d4300862e4f087
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=1692d7fbbe9eb0baa39c63ca62e62a6a
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -127,7 +127,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/da38a796_bfe4_4a6e_ad68_8dec005d8ee3
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2e582b6a_aac8_4c8f_bb9c_3fe3a2b63df5
 # environment
 MAKELEVEL := 0
 # default
@@ -177,7 +177,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := output
 # environment
-SYSTEMD_EXEC_PID = 1839
+SYSTEMD_EXEC_PID = 1853
 # environment
 DISPLAY = :0
 # environment
@@ -261,9 +261,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2050, inode 4206746): 13 files, no impossibilities.
+# . (device 2050, inode 4206746): 15 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -346,12 +346,12 @@ makefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 170 B / avg = 8 B
-# current buf: size = 8162 B / used = 170 B / count = 20 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 192 B / avg = 8 B
+# current buf: size = 8162 B / used = 192 B / count = 22 / avg = 8 B
 
-# strcache performance: lookups = 36 / hit rate = 44%
+# strcache performance: lookups = 38 / hit rate = 42%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/36=0%
-# Finished Make data base on Sat Jul 30 14:27:51 2022
+# Load=22/8192=0%, Rehash=0, Collisions=0/38=0%
+# Finished Make data base on Sun Jul 31 12:40:23 2022
 
  

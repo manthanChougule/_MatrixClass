@@ -1,4 +1,3 @@
-
 class matrix
 {
 private:
@@ -48,6 +47,19 @@ public:
     matrix operator-(matrix &M) const;
     // operator *
     matrix operator*(matrix &M) const;
+    // operator << 
+    friend std::ostream &operator<<( std::ostream& , const matrix &M);
+    // operator >>
+    friend std::istream &operator>>( std::istream& , matrix &M);
+
+    /* --------------------Scalar Muti and Division-------------------- */
+    void scalarMultiplication(double num);
+    void scalarDivision(double num);
+
+    /* --------------------6) Member Functions -------------------- */
+    bool isDiagonalDominant();
+
+    /* --------------------System of Linear Equations-------------------- */
 
 
 

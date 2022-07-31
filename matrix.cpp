@@ -2,7 +2,6 @@
 // #include<math.h>
 // #include<iomanip>
 // #include <fstream>
-// #include <iostream>
 // #include <cstring>
 #include <bits/stdc++.h>
 #include <iostream>
@@ -113,7 +112,7 @@ void matrix::displayMatrix()
     {
         for (int j = 0; j < getCol(); j++)
         {
-            cout << mat_[i][j] << " ";
+            cout << setw(8) << mat_[i][j] << " ";
         }
         cout << endl;
     }
@@ -240,7 +239,7 @@ matrix::matrix(int row, int col, char filename[50])
             counter++;
         }
         // printMatrix();
-        displayMatrix();
+        // displayMatrix();
     }
     else
     {
@@ -359,7 +358,7 @@ matrix matrix::operator*(matrix &M) const
     if (this->getCol() == M.getRow())
     {
         matrix ans;
-        // row of 1st mat and col of 2nd mat    
+        // row of 1st mat and col of 2nd mat
         ans.setter(this->getRow(), M.getCol());
         ans.matrixCreate();
 
@@ -383,8 +382,93 @@ matrix matrix::operator*(matrix &M) const
     }
 }
 
-// deconstructor
+ostream &operator<<(ostream &output, const matrix &M)
+{
+    // operator <<
+    output << "row = " << M.getRow() << ", col = " << M.getCol() << endl;
+    output << endl;
+    output << " Matrix " << endl;
+    output << endl;
+    for (int i = 0; i < M.getRow(); i++)
+    {
+        for (int j = 0; j < M.getCol(); j++)
+        {
+            output << setw(8) << M.mat_[i][j];
+        }
+        output << endl;
+    }
+    return output;
+}
 
+istream &operator>>(istream &input, matrix &M)
+{
+    // operator >>
+    cout << "Enter Row and Col " << endl;
+    input >> M.row_;
+    input >> M.col_;
+    M.matrixCreate();
+
+    cout << "Enter the content of matrix " << endl;
+    for (int i = 0; i < M.getRow(); i++)
+    {
+        cout << "Enter element of " << i << "th row" << endl;
+        for (int j = 0; j < M.getCol(); j++)
+        {
+            // cout << "Enter element of (" << i << ", "<< j <<")th position ." << endl;
+            input >> M.mat_[i][j];
+        }
+    }
+    return input;
+}
+
+// scalar multiplication and division
+void matrix::scalarMultiplication(double num)
+{
+    // multiplication
+    for (int i = 0; i < this->getRow(); i++)
+    {
+        for (int j = 0; j < this->getCol(); j++)
+        {
+            this->mat_[i][j] *= num;
+        }
+    }
+}
+
+void matrix::scalarDivision(double num)
+{
+    // scalar division
+    for (int i = 0; i < this->getRow(); i++)
+    {
+        for (int j = 0; j < this->getCol(); j++)
+        {
+            this->mat_[i][j] /= num;
+        }
+    }
+}
+
+/* --------------------6) Member Functions -------------------- */
+bool matrix::isDiagonalDominant()
+{
+    for (int i = 0; i < this->getRow(); i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < this->getCol(); j++)
+        {
+            sum += abs(this->mat_[i][j]); 
+        }
+        sum -= abs(this->mat_[i][i]);
+        cout << sum << endl;
+        if(abs(this->mat_[i][i]) < sum)
+        {
+            return false;
+        }
+    }
+    return true;
+};
+
+
+
+// deconstructor
 matrix::~matrix()
 {
     for (int i = 0; i < row_; i++)
