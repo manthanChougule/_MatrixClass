@@ -111,8 +111,17 @@ int main()
     // cout << m25.isDiagonalDominant();
     // (m25.isDiagonalDominant()) ? (cout << "Yes \n") : (cout << "No \n");
     
-    
+    // matrix m26;
+    // m26.displayMatrix();
+    // (m26.isSquareMatrix()) ? (cout << "Yes \n") : (cout << "No \n");
 
+    matrix m26;
+    m26.transposeMatrix();
+    m26.displayMatrix();
+    cout << "--------------" << endl;
+    cout << m26.transposeMatrix();
+
+    
     return 0;
 }
 

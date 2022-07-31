@@ -56,8 +56,19 @@ public:
     void scalarMultiplication(double num);
     void scalarDivision(double num);
 
-    /* --------------------6) Member Functions -------------------- */
+    /* --------------------6) Member Functions (true/false)-------------------- */
+    // to check if matrix is diagonally dominant or not
     bool isDiagonalDominant();
+    // check if matrix is square matrix of not
+    bool isSquareMatrix();
+    // check if matrix is symmetric or not
+    // bool isSymmetricMatrix();
+
+    /* --------------------6) Member Functions -------------------- */
+    // transpose of matrix
+    matrix transposeMatrix();
+
+    // make matrix diagonally dominant 
 
     /* --------------------System of Linear Equations-------------------- */
 

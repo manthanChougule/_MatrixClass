@@ -211,7 +211,7 @@ matrix::matrix(int row, int col)
 {
     setter(row, col);
     matrixCreate();
-    displayMatrix();
+    // displayMatrix();
 }
 
 matrix::matrix(int row, int col, char filename[50])
@@ -446,9 +446,11 @@ void matrix::scalarDivision(double num)
     }
 }
 
-/* --------------------6) Member Functions -------------------- */
+/* --------------------6) Member Functions (true/false)-------------------- */
 bool matrix::isDiagonalDominant()
 {
+    // checking if matrix is diagonally dominant or not
+    // (m25.isDiagonalDominant()) ? (cout << "Yes \n") : (cout << "No \n");
     for (int i = 0; i < this->getRow(); i++)
     {
         int sum = 0;
@@ -457,7 +459,7 @@ bool matrix::isDiagonalDominant()
             sum += abs(this->mat_[i][j]); 
         }
         sum -= abs(this->mat_[i][i]);
-        cout << sum << endl;
+        // cout << sum << endl;
         if(abs(this->mat_[i][i]) < sum)
         {
             return false;
@@ -466,7 +468,31 @@ bool matrix::isDiagonalDominant()
     return true;
 };
 
+bool matrix::isSquareMatrix()
+{
+    // cheking if matrix is square or not
+    // (m26.isSquareMatrix()) ? (cout << "Yes \n") : (cout << "No \n");
+    if(row_ != col_)
+    {
+        return false;
+    }
+    return true;
+}
 
+/* --------------------6) Member Functions -------------------- */
+
+matrix matrix::transposeMatrix()
+{
+    matrix M(col_, row_);
+    for (int i = 0; i < col_; i++)
+    {
+        for (int j = 0; j < row_; j++)
+        {
+            M.mat_[i][j] = this->mat_[j][i];
+        }
+    }
+    return M;
+}
 
 // deconstructor
 matrix::~matrix()
